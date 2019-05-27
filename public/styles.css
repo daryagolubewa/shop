@@ -1,0 +1,26 @@
+.one {
+  width: 200px;
+  height: 200px;
+  background-color: #62f442;
+  margin: 30px;
+  text-align: center;
+  box-shadow: 4px 4px 5px #6c757d;
+  transition: 0.5s ease 0s;
+  transform: rotate(5deg);
+}
+.one:hover {
+  transform: scale(1.13);
+}
+.two {
+  width: 200px;
+  height: 200px;
+  background-color: #42f4e8;
+  margin: 30px;
+  text-align: center;
+  box-shadow: 4px 4px 5px #6c757d;
+  transition: 0.5s ease 0s;
+  transform: rotate(-5deg);
+}
+.two:hover {
+  transform: scale(1.13);
+}

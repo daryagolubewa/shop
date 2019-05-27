@@ -1,0 +1,228 @@
+.main-block {
+  width: 1260px;
+  margin: auto;
+  background-color: #f7f7f7;
+}
+.button_style {
+  background-color: #0284c6;
+  border-radius: 0px;
+}
+.text_style {
+  font-family: 'ProximaNova_Regular';
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+}
+.item_card__button-purchase {
+  background-color: #0284c6;
+  border-radius: 0px;
+  width: 99px;
+  height: 35px;
+  margin: 38px 0px 0px 23.9px;
+}
+.item_card__button-purchase:hover {
+  background-color: #0a608b;
+}
+.item_card__button-purchase_text {
+  font-family: 'ProximaNova_Regular';
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  width: 44px;
+  height: 17px;
+  margin: 3px 0px 0px 5px;
+  font-size: 14px;
+  text-align: center;
+  color: #ffffff;
+}
+.filter__button-show {
+  background-color: #0284c6;
+  border-radius: 0px;
+  width: 251.1px;
+  height: 35px;
+  margin: 30px 28.9px 0px 28.1px;
+}
+.filter__button-show:hover {
+  background-color: #0a608b;
+}
+.filter__button-clean {
+  background-color: #f8f8f8;
+  color: #333333;
+  width: 251.1px;
+  height: 35px;
+  border-radius: 0px;
+  border: none;
+  margin: 10px 28.9px 0px 28.1px;
+}
+.filter__button-clean:hover {
+  background-color: #dfdfdf;
+}
+.item-card__icon-purchase {
+  margin: 0px 5px 0px 0px;
+}
+.item-card {
+  width: 307px;
+  height: 590px;
+  background-color: #ffffff;
+  margin: 10px 10px 10px 0px;
+}
+.item-card__item-number {
+  font-family: 'ProximaNova_Regular';
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  margin: 20px 15px 15px 0px;
+  height: 15px;
+  font-size: 12px;
+  font-weight: 300;
+  text-align: right;
+  color: #bfbfbf;
+}
+.item-card__item-picture {
+  width: 277.3px;
+  height: 200px;
+  object-fit: contain;
+  margin-left: 24px;
+  border: none;
+}
+.item_card__item-avail {
+  font-family: 'ProximaNova_Regular';
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  margin: 22px 0px 5px 0px;
+  height: 16px;
+  font-size: 12.8px;
+  font-weight: 300;
+  color: #81c03d;
+}
+.item-card__item-info {
+  margin-left: 23.9px;
+}
+.item-card__item-name {
+  font-family: 'ProximaNova_Regular';
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  width: 219.8px;
+  height: 66px;
+  margin: 0px 0px 17px 0px;
+  font-size: 17.8px;
+  color: #262626;
+}
+.item-card__item-techs {
+  font-family: 'ProximaNova_Regular';
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  width: 221.8px;
+  height: 110px;
+  font-size: 11.8px;
+  font-weight: 300;
+  line-height: 1.86;
+  color: #9b9b9b;
+}
+.item_card__item-value {
+  color: #4f4f4f;
+}
+.item_card__icons {
+  color: #bfbfbf;
+  padding: 30px 0px 6px 0px;
+}
+.item-card__fav {
+  cursor: pointer;
+}
+.filter {
+  width: 308.1px;
+  height: 325px;
+  background-color: #ffffff;
+  margin: 10px 10px 0px 0px;
+}
+.filter__info {
+  font-family: 'ProximaNova_Regular';
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  font-size: 17px;
+  color: #4a4a4a;
+  margin: 18px 0px 0px 28.1px;
+}
+.filter__checkbox-info {
+  font-family: 'ProximaNova_Regular';
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  font-family: 'Proxima Nova Lt';
+  font-size: 14px;
+  font-weight: 300;
+  color: #4a4a4a;
+  margin: 15px 0px 0px 0px;
+}
+.filter__checkbox-container {
+  display: block;
+  position: relative;
+  padding-left: 20px;
+  cursor: pointer;
+  background-color: #ffffff;
+}
+.filter__checkbox-container:hover {
+  color: #3e8bdc;
+}
+.filter__checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.filter__checkbox-checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 14px;
+  height: 14px;
+  background-color: #eee;
+  box-shadow: inset 0 2px 2px 0 rgba(0, 0, 0, 0.07);
+  border: solid 1px #d7d7d7;
+}
+.filter__checkbox-container:hover input ~ .filter__checkbox-checkmark {
+  background-color: #ccc;
+}
+.filter__checkbox-container input:checked ~ .filter__checkbox-checkmark {
+  background-color: #3e8bdc;
+}
+.filter__checkbox-checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.filter__checkbox-container input:checked ~ .filter__checkbox-checkmark:after {
+  display: block;
+}
+.filter__checkbox-container .filter__checkbox-checkmark:after {
+  left: 5px;
+  top: 0px;
+  width: 5px;
+  height: 10px;
+  border: solid #fff;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
