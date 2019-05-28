@@ -3,7 +3,7 @@ import showItemsListReducer from './show-items-list-reducer'
 
 const combined = combineReducers(
     {
-       showItemsListReducer,
+       showItemsListReducer
     }
 )
 

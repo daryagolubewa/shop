@@ -8,7 +8,7 @@ import {addToFavAC} from "../../redux/actions/items-actions"
 import connect from "react-redux/es/connect/connect"
 
 // const mapStateToProps = state => ({
-//     itemsList: state.showItemsListReducer.items
+//     favs: state.showItemsListReducer.items
 // })
 
 const mapDispatchToProps = dispatch => ({
@@ -38,7 +38,6 @@ const mapDispatchToProps = dispatch => ({
         } else if (resJson.status === "FAVORITE_FAIL") {
             const message = resJson.data.message;
             console.log('fail-message', message);
-
         }
     }
 

@@ -1,7 +1,17 @@
 import React, {Component} from 'react'
 import {Button} from 'react-bootstrap'
+import connect from "react-redux/es/connect/connect"
+import {showItemsListAC} from "../../redux/actions/items-actions"
 
-export default class Filter extends Component {
+const mapStateToProps = state => ({
+    itemsList: state.showItemsListReducer.items
+})
+
+const mapDispatchToProps = dispatch => ({
+    showItemsList: items => dispatch(showItemsListAC(items))
+})
+
+class Filter extends Component {
     state = {
         'Canon': false,
         'Fujifilm': false,
@@ -21,8 +31,35 @@ export default class Filter extends Component {
         this.setState(newState)
     }
 
+    showFilterResults = async (names) => {
+        console.log('names', names);
+
+        let random = Math.round(Math.random());
+        let url = '';
+        if (random > 0.5) {
+            url = 'https://my-json-server.typicode.com/aero-frontend/test-task/FILTER_SUCCESS'
+        } else {
+            url = 'https://my-json-server.typicode.com/aero-frontend/test-task/FILTER_FAIL';
+        }
+
+        let res = await fetch(`${url}`, {
+            method: 'GET',
+            headers: {}
+        });
+        const resJson = await res.json();
+        const { showItemsList } = this.props;
+        if (resJson.status === "FILTER_SUCCESS") {
+            const filterResult = resJson.data.products;
+            showItemsList(filterResult)
+        } else if (resJson.status === "FILTER_FAIL") {
+            const message = resJson.data.message;
+            console.log('fail-message', message);
+        }
+    }
+
     render() {
         let filters = Object.keys(this.state);
+        console.log('filter', this.state);
 
         let columnedFilters = [];
         let filtersInRow = [];
@@ -55,7 +92,7 @@ export default class Filter extends Component {
             }
         }
         return <div className='filter'>
-                <Button className='filter__button-show'> Показать результат </Button>
+                <Button className='filter__button-show' onClick={() => this.showFilterResults(this.state)}> Показать результат </Button>
                 <Button className='filter__button-clean'> Очистить фильтр </Button>
 
                 <div className='filter__info'>
@@ -67,3 +104,9 @@ export default class Filter extends Component {
             </div>
     }
 }
+
+export default connect(
+     mapStateToProps,
+   // null,
+    mapDispatchToProps
+)(Filter)
