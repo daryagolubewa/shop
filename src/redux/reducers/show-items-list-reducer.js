@@ -5,7 +5,6 @@ const initialState = {
 }
 
 export default function showItemsListReducer(state = initialState, {type, payload}) {
-    console.log('state', state);
     switch (type) {
         case ITEMS_LIST_TYPES.SHOW_ITEMS_LIST: {
            return {
@@ -13,12 +12,13 @@ export default function showItemsListReducer(state = initialState, {type, payloa
            }
         }
         case ITEMS_LIST_TYPES.ADD_TO_FAV: {
-            return state.items.map(elem =>
-                (elem.id === payload.id)
-            ? {...elem, isFav: payload.status}
-            : elem
-            )
+            return {
+                items: state.items.map(elem =>
+                    (elem.id == payload.id) ?
+                        {...elem, inFav: payload.status} : elem),
+            };
         }
+
         default:
             return state
     }

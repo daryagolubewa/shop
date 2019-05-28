@@ -32,7 +32,6 @@ class Filter extends Component {
     }
 
     showFilterResults = async (names) => {
-        console.log('names', names);
 
         let random = Math.round(Math.random());
         let url = '';
@@ -59,7 +58,6 @@ class Filter extends Component {
 
     render() {
         let filters = Object.keys(this.state);
-        console.log('filter', this.state);
 
         let columnedFilters = [];
         let filtersInRow = [];
@@ -107,6 +105,5 @@ class Filter extends Component {
 
 export default connect(
      mapStateToProps,
-   // null,
     mapDispatchToProps
 )(Filter)

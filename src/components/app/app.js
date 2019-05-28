@@ -22,7 +22,6 @@ class App extends Component {
         });
         if (response.status) {
             const itemsList = await response.json();
-            console.log('items', itemsList.data.products);
             const items = itemsList.data.products
             showItemsList(items);
         }

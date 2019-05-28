@@ -7,9 +7,6 @@ import heart from './shape.svg'
 import {addToFavAC} from "../../redux/actions/items-actions"
 import connect from "react-redux/es/connect/connect"
 
-// const mapStateToProps = state => ({
-//     favs: state.showItemsListReducer.items
-// })
 
 const mapDispatchToProps = dispatch => ({
     addToFav: (id, status) => dispatch(addToFavAC(id, status))
@@ -41,7 +38,6 @@ const mapDispatchToProps = dispatch => ({
         }
     }
 
-
     render() {
         let {product} = this.props;
 
@@ -67,8 +63,9 @@ const mapDispatchToProps = dispatch => ({
                         <div className='item-card__button-purchase_text'> Купить</div>
                     </Button>
                     <div className='d-flex item_card__icons mt-3'>
-                        <img src={heart} className='item-card__fav mr-2' onClick={() => this.addToFav(product.id)}/>
-                        <img src={scales} className='mr-3'/>
+                        <img src={heart} className={product.inFav ? 'item-card__isFav' : ''}
+                             onClick={() => this.addToFav(product.id)}/>
+                        <img src={scales} className='ml-2 mr-3'/>
                     </div>
                 </div>
             </div>
@@ -76,7 +73,6 @@ const mapDispatchToProps = dispatch => ({
 }
 
 export default connect(
-  //  mapStateToProps,
     null,
     mapDispatchToProps
 )(ItemCard)
