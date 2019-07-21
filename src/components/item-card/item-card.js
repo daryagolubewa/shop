@@ -59,13 +59,13 @@ const mapDispatchToProps = dispatch => ({
                 </div>
                 <div className='d-flex justify-content-between'>
                     <Button className='item_card__button-purchase d-flex '>
-                        <img src={cart} className='item-card__icon-purchase'/>
+                        <img src={cart} alt='cart' className='item-card__icon-purchase'/>
                         <div className='item-card__button-purchase_text'> Купить</div>
                     </Button>
                     <div className='d-flex item_card__icons mt-3'>
-                        <img src={heart} className={product.inFav ? 'item-card__isFav' : ''}
+                        <img src={heart} alt='fav' className={product.inFav ? 'item-card__isFav' : ''}
                              onClick={() => this.addToFav(product.id)}/>
-                        <img src={scales} className='ml-2 mr-3'/>
+                        <img src={scales} alt='comparison' className='ml-2 mr-3'/>
                     </div>
                 </div>
             </div>

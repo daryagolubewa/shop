@@ -1,17 +1,14 @@
 import React, {Component} from 'react'
 import {Button} from 'react-bootstrap'
-import connect from "react-redux/es/connect/connect"
-import {showItemsListAC} from "../../redux/actions/items-actions"
+// import connect from "react-redux/es/connect/connect"
+// import {showItemsListAC} from "../../redux/actions/items-actions"
 
-const mapStateToProps = state => ({
-    itemsList: state.showItemsListReducer.items
-})
+//
+// const mapDispatchToProps = dispatch => ({
+//     showItemsList: items => dispatch(showItemsListAC(items))
+// })
 
-const mapDispatchToProps = dispatch => ({
-    showItemsList: items => dispatch(showItemsListAC(items))
-})
-
-class Filter extends Component {
+export default class Filter extends Component {
     state = {
         'Canon': false,
         'Fujifilm': false,
@@ -103,7 +100,7 @@ class Filter extends Component {
     }
 }
 
-export default connect(
-     mapStateToProps,
-    mapDispatchToProps
-)(Filter)
+// export default connect(
+//      mapStateToProps,
+//     mapDispatchToProps
+// )(Filter)
